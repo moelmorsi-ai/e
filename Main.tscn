@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://cuyhiq5am42s2" path="res://MapView.cs" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://dwgn2i4pfj3bg" path="res://Scripts/WorldGen/ProceduralWorldGenerator.cs" id="3_r0du0"]
+[ext_resource type="Script" path="res://Scripts/Simulation/SimulationRuntime.cs" id="4_sim"]
+
+[node name="Node2D" type="Node2D" unique_id=2110644823]
+
+[node name="WorldMap" type="Node2D" parent="." unique_id=716317683]
+script = ExtResource("1_uu6xs")
+
+[node name="MapRenderer" type="Sprite2D" parent="WorldMap" unique_id=298737414]
+texture_filter = 1
+position = Vector2(-1594, 1606)
+
+[node name="WorldGenerator" type="Sprite2D" parent="WorldMap" unique_id=745392621]
+script = ExtResource("3_r0du0")
+
+[node name="SimulationRuntime" type="Node" parent="."]
+script = ExtResource("4_sim")
